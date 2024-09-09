@@ -101,3 +101,42 @@ repetir el proceso con cada una de las VLAN
 ![ping_contabilidad](img/image-11.png)
 
 - Ping entre IT
+
+## SW9 de manera transparente 
+### Comandos utilizados
+- enable
+- configure terminal
+- vtp mode < transparent >
+- vtp domain P11
+- vtp password usac
+- vtp version 2
+- exit
+- wr
+
+Para verificar la configuración en el switch 9 de manera transparente deberá ingresar el siguiente comando:
+- show vtp status
+
+![TransparentMode](img/TransparentSW9.png)
+
+
+## PING entre maquinas IT
+
+Para verificar pings entre maquinas IT, se realizar el ping unicamente en las maquinas denominadas para esa area
+- Se abre la consola 
+- Se intoduce la ip 
+- Se verifica que haya ping entre ambas maquinas
+
+![ping_maquinasIT](img/IT1.png)
+![ping_maquinasIT](img/IT2.png)
+
+## Configuracion STP para switches 
+- enable
+- configure terminal
+- spanning-tree mode rapid-pvst
+- exit
+- wr
+
+Para verificar que tengan el STP activado se coloca el siguiente comando
+-  show spannig-tree
+
+![STP](img/STP.png)
