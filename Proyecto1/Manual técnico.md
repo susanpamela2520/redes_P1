@@ -47,9 +47,9 @@ Para verificar la configuración en el switch se deberá ingresar el siguiente c
 
 
 ### Área de trabajo
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](img/image.png)
+![alt text](img/image-1.png)
+![alt text](img/image-2.png)
 
 ## Modo troncal
 ### Comandos utilizados
@@ -66,10 +66,10 @@ Para verificar la configuración en el switch se deberá ingresar el siguiente c
 Para verificar la configuración en el switch se deberá ingresar el siguiente comando:
 - show startup-config
 
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](img/image-4.png)
+![alt text](img/image-5.png)
+![alt text](img/image-6.png)
+![alt text](img/image-7.png)
 
 
 ## Configuración de las VLAN
@@ -85,16 +85,19 @@ repetir el proceso con cada una de las VLAN
 - exit
 - wr
 
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 ## Ping entre áreas
 - Ping entre RRHH
-![pingRRHH](image-9.png)
+
+![pingRRHH](img/image-9.png)
 
 - Ping entre secretaría
-![ping_secretaria](image-10.png)
+
+![ping_secretaria](img/image-10.png)
 
 - Ping entre contabilidad
-![ping_contabilidad](image-11.png)
+
+![ping_contabilidad](img/image-11.png)
 
 - Ping entre IT
