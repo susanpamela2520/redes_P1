@@ -126,8 +126,8 @@ Para verificar pings entre maquinas IT, se realizar el ping unicamente en las ma
 - Se intoduce la ip 
 - Se verifica que haya ping entre ambas maquinas
 
-![ping_maquinasIT](img/IT1.png)
-![ping_maquinasIT](img/IT2.png)
+![ping_maquinasIT](img/IT1.jpeg)
+![ping_maquinasIT](img/IT2.jpeg)
 
 ## Configuracion STP para switches 
 - enable
@@ -139,4 +139,4 @@ Para verificar pings entre maquinas IT, se realizar el ping unicamente en las ma
 Para verificar que tengan el STP activado se coloca el siguiente comando
 -  show spannig-tree
 
-![STP](img/STP.png)
+![STP](img/STP.jpeg)
