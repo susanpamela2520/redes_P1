@@ -166,3 +166,7 @@ Para verificar la configuración de los Routers  deberá ingresar el siguiente c
 - int f0/0
 - ip add 182.178.1.2 255.255.255.248
 - no shutdown
+
+
+## Configuracion VCPS
+![Tabla VPCS](img/TVPC.png)
