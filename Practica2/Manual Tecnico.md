@@ -6,136 +6,109 @@ CiscoWorks, quienes desean expandir su oferta educativa y como resultado fue cre
 Academia Técnica de Formación Empresarial – ACATEC.
 
 ## Topología de red
+### RED1
+![red1](img/red1.png)
 
-### Centro administrativo
-![adminCenter](img/centro_administrativo.png)
+### RED2
+![red2](img/red2.png)
 
-### Área de trabajo
-![workstation](img/area_trabajo.png)
-
-### BackBone
-![backbone](img/backbone.png)
+### Conexion Estatica
+![conexiones estaticas](img./estaticas.png)
 
 
-## Configuración de las VTP
+## Configuración Routers
+## Router1
+![Router1](img./r1.png)
+
 ### Comandos utilizados
 - enable
 - configure terminal
-- vtp mode <server | transparent | client>
-- vtp domain P11
-- vtp password usac
-- vtp version 2
+- no ip domain-lookup
+- hostname R1
+- int se0/0
+- ip add 10.0.0.1 255.255.255.252
+- no shutdown
+- int f0/0
+- ip add 182.168.1.2 255.255.255.248
+- no shutdown
+- int f0/1
+- ip add 182.168.2.2 255.255.255.248
+- no shutdown
+
+## Router2
+![Router2](img./r2.png)
+
+### Comandos utilizados
+- configure terminal
+- no ip domain-lookup
+- hostname R2
+- interface f0/1
+- ip add 182.168.0.2 255.255.255.0
+- standby 10 ip 182.168.0.1
+- standby 10 priority 150
+- standby 10 preempt
+- no shutdown
+- interface f0/0
+- ip add 182.168.1.1 255.255.255.248
+- no shutdown
+
+## Router6
+![Router6](img./r6.png)
+
+### Comandos utilizados
+- configure terminal
+- no ip domain-lookup
+- hostname R6
+- int f0/1
+- ip add 182.178.0.3 255.255.255.0
+- no shutdown
+- int f0/0
+- ip add 182.178.2.2 255.255.255.248
+- no shutdown
+
+Para verificar la configuración de los Routers  deberá ingresar el siguiente comando:
+- show running-config
+
+
+## Configuración Switches
+## Switch1
+![Switch1](img./sw1.png)
+
+### Comandos utilizados
+- configure terminal
+- interface range fa0/3-4
+- channel-group 1 mode desirable
 - exit
-- wr
-
-Para verificar la configuración en el switch se deberá ingresar el siguiente comando:
-- show vtp status
-
-### BackBone
-![vtp01](img/vtp01.png)
-![vtp02](img/vtp02.png)
-![vtp03](img/vtp03.png)
-![vtp04](img/vtp04.png)
-![vtp05](img/vtp05.png)
-![vtp06](img/vtp06.png)
-
-### Centro administrativo
-![vtp07](img/vtp07.png)
-![vtp08](img/vtp08.png)
-![vtp09](img/vtp09.png)
-
-
-### Área de trabajo
-![alt text](img/image.png)
-![alt text](img/image-1.png)
-![alt text](img/image-2.png)
-
-## Modo troncal
-### Comandos utilizados
-- enable
-- configure terminal
-- interface range f0/1-2 para este ejemplo
-- switchport trunk encapsulation dot1q
+- interface port-channel 1 
 - switchport mode trunk
-- switchport trunk allowed vlan all
-- exit
-- exit
+- end
 - wr
 
-Para verificar la configuración en el switch se deberá ingresar el siguiente comando:
-- show startup-config
+## Switch2
+![Switch3](img./sw3.png)
 
-![alt text](img/image-4.png)
-![alt text](img/image-5.png)
-![alt text](img/image-6.png)
-![alt text](img/image-7.png)
-
-
-## Configuración de las VLAN
 ### Comandos utilizados
-- enable
 - configure terminal
-- vlan <26 | 36 | 46 | 56>
-- name <contabilidad | secretaria | RRHH | IT>
+- interface range fa0/3-4
+- channel-group 1 mode desirable
 - exit
-
-repetir el proceso con cada una de las VLAN
-- exit
-- exit
+- interface port-channel 1 
+- switchport mode trunk
+- end
 - wr
 
-![alt text](img/image-3.png)
-
-## Ping entre áreas
-- Ping entre RRHH
-
-![pingRRHH](img/image-9.png)
-
-- Ping entre secretaría
-
-![ping_secretaria](img/image-10.png)
-
-- Ping entre contabilidad
-
-![ping_contabilidad](img/image-11.png)
-
-- Ping entre IT
-
-## SW9 de manera transparente 
-### Comandos utilizados
-- enable
-- configure terminal
-- vtp mode < transparent >
-- vtp domain P11
-- vtp password usac
-- vtp version 2
-- exit
-- wr
-
-Para verificar la configuración en el switch 9 de manera transparente deberá ingresar el siguiente comando:
-- show vtp status
-
-![TransparentMode](img/TransparentSW9.png)
+Para verificar la configuración de los Routers  deberá ingresar el siguiente comando:
+- show running-config
 
 
-## PING entre maquinas IT
 
-Para verificar pings entre maquinas IT, se realizar el ping unicamente en las maquinas denominadas para esa area
-- Se abre la consola 
-- Se intoduce la ip 
-- Se verifica que haya ping entre ambas maquinas
+## VPCS
+## VPC11
+![VPC11](img./VPC11.png)
 
-![ping_maquinasIT](img/IT1.jpeg)
-![ping_maquinasIT](img/IT2.jpeg)
+## VPC14
+![VPC14](img./VPC14.png)
 
-## Configuracion STP para switches 
-- enable
-- configure terminal
-- spanning-tree mode rapid-pvst
-- exit
-- wr
 
-Para verificar que tengan el STP activado se coloca el siguiente comando
--  show spannig-tree
 
-![STP](img/STP.jpeg)
+
