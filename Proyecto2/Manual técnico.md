@@ -384,3 +384,45 @@ Se colocaron en los routers en la red correspondiente.
 - exit
 - do w
 
+## ASIGNACION DE IP EN CORE
+
+### Imagen Tablas
+![CENTRAL](img/TablaInterCent.png)
+
+### Imagen Tablas
+![JUTIAPA](img/TablaInterJut.png)
+
+### Imagen Tablas
+![ESCUINTLA](img/TablaInterEsc.png)
+
+### Imagen Tablas
+![QUICHE](img/TablaInterQui.png)
+
+### Imagen Tablas
+![PETEN](img/TablaInterPet.png)
+
+### Imagen Tablas
+![IZABAL](img/TablaInterIza.png)
+
+
+
+## ASIGNACION DE IP EN SEDES
+
+### Imagen Tablas
+![JUTIAPA](img/IPJUTIAPA.jpeg)
+
+### Imagen Tablas
+![ESCUINTLA](img/IPESCUINTLA.jpeg)
+
+### Imagen Tablas
+![QUICHE](img/IPSQUICHE.jpeg)
+
+### Imagen Tablas
+![PETEN](img/IPPETEN.jpeg)
+
+### Imagen Tablas
+![IZABAL](img/IPSIZABAL.jpeg)
+
+
+
+
